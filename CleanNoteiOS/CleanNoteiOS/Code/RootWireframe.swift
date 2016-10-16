@@ -12,10 +12,7 @@ class RootWireframe {
     let randomlyFailingGateway = RandomlyFailingNoteGatewayDecorator(noteGateway: inMemoryNoteGateway, errorGenerator: errorGenerator)
 
     let noteGateway = randomlyFailingGateway
-
-    let editorWireframe = EditorWireframe(noteGateway: noteGateway)
-
-    ListWireframe().configure(listViewController: listViewController, noteGateway: noteGateway, editorWireframe: editorWireframe)
+    ListWireframe().configure(listViewController: listViewController, noteGateway: noteGateway)
   }
 
   private func makeSampleNotes() -> [Note] {

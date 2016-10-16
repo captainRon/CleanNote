@@ -18,12 +18,12 @@ class EditorViewControllerTests: XCTestCase {
   }
 
 
-  func test_viewDidLoad_tellsInteractorToFetchText() {
+  func test_viewWillAppear_tellsInteractorToFetchText() {
     // Arrange.
     interactor.expectFetchText()
 
     // Act.
-    sut.viewDidLoad()
+    sut.viewWillAppear(false)
 
     // Assert.
     XCTAssert(interactor.assert())

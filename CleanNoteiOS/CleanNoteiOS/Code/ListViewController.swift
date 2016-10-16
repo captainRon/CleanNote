@@ -13,7 +13,7 @@ class NoteIDWrapperObject: NSObject {
 
 class ListViewController: StoryboardViewController {
   var interactor: ListInteractorInput!
-  var editorWireframe: EditorWireframe!
+  var noteGateway: NoteGateway!
   var list: ListViewList?
   @IBOutlet weak var tableView: UITableView!
 
@@ -22,14 +22,38 @@ class ListViewController: StoryboardViewController {
     interactor.fetchNotesAndSelect(noteID: nil)
   }
 
-  fileprivate func noteIDFor(row: Int) -> NoteID? {
-    guard let listViewNote = list?.notes[row] else { return nil }
-    return listViewNote.id
-  }
-
   @IBAction func addNote(_ sender: AnyObject) {
     interactor.makeNote()
   }
+
+    
+}
+
+extension ListViewController: NoteDataSource {
+    
+    func noteID(for sender:Any?) -> String {
+        return noteIDFrom(object: sender) ?? noteIDForSelectedRowIn(tableView: tableView)!
+    }
+    
+}
+
+extension ListViewController {
+    
+    fileprivate func noteIDFrom(object: Any?) -> NoteID? {
+        guard let noteIDWrapperObject = object as? NoteIDWrapperObject else { return nil }
+        return noteIDWrapperObject.id
+    }
+    
+    fileprivate func noteIDForSelectedRowIn(tableView :UITableView) -> NoteID? {
+        let indexPath = tableView.indexPathForSelectedRow
+        guard let selectedRow = indexPath?.row else { return nil }
+        return noteIDFor(row: selectedRow)
+    }
+    
+    fileprivate func noteIDFor(row: Int) -> NoteID? {
+        guard let listViewNote = list?.notes[row] else { return nil }
+        return listViewNote.id
+    }
     
 }
 

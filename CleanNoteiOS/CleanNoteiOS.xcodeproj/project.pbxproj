@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8C089EA51D9EC06C00077828 /* StoryboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C089EA41D9EC06C00077828 /* StoryboardViewController.swift */; };
 		8C95575F1DB33D1000E7FBE7 /* EditorSegueConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C95575E1DB33D1000E7FBE7 /* EditorSegueConfiguration.swift */; };
+		8C9557661DB346A100E7FBE7 /* NoteIDSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9557651DB346A100E7FBE7 /* NoteIDSource.swift */; };
 		8CC323B91D99755400CF1557 /* TestableAlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC323B81D99755400CF1557 /* TestableAlertHelper.swift */; };
 		8CC323C51D998CDF00CF1557 /* StoryboardSegueCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC323C41D998CDF00CF1557 /* StoryboardSegueCoordinator.swift */; };
 		C8296D4A1D665FE800E5DA44 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8296D491D665FE800E5DA44 /* AlertHelper.swift */; };
@@ -18,7 +19,6 @@
 		C8DE88411D49187900D8D8AE /* CleanNoteCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C8DE883C1D49186600D8D8AE /* CleanNoteCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C8DF78BC1D4905770070D75A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DF78B61D4905770070D75A /* AppDelegate.swift */; };
 		C8DF78BD1D4905770070D75A /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DF78B71D4905770070D75A /* EditorViewController.swift */; };
-		C8DF78BE1D4905770070D75A /* EditorWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DF78B81D4905770070D75A /* EditorWireframe.swift */; };
 		C8DF78BF1D4905770070D75A /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DF78B91D4905770070D75A /* ListViewController.swift */; };
 		C8DF78C01D4905770070D75A /* ListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DF78BA1D4905770070D75A /* ListWireframe.swift */; };
 		C8DF78C11D4905770070D75A /* RootWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DF78BB1D4905770070D75A /* RootWireframe.swift */; };
@@ -78,6 +78,7 @@
 /* Begin PBXFileReference section */
 		8C089EA41D9EC06C00077828 /* StoryboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoryboardViewController.swift; path = CleanNoteiOS/Code/StoryboardViewController.swift; sourceTree = "<group>"; };
 		8C95575E1DB33D1000E7FBE7 /* EditorSegueConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditorSegueConfiguration.swift; path = CleanNoteiOS/Code/EditorSegueConfiguration.swift; sourceTree = "<group>"; };
+		8C9557651DB346A100E7FBE7 /* NoteIDSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NoteIDSource.swift; path = CleanNoteiOS/Code/NoteIDSource.swift; sourceTree = "<group>"; };
 		8CC323B81D99755400CF1557 /* TestableAlertHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestableAlertHelper.swift; sourceTree = "<group>"; };
 		8CC323C41D998CDF00CF1557 /* StoryboardSegueCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoryboardSegueCoordinator.swift; path = CleanNoteiOS/Code/StoryboardSegueCoordinator.swift; sourceTree = "<group>"; };
 		C8296D491D665FE800E5DA44 /* AlertHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
@@ -91,7 +92,6 @@
 		C8DE88361D49186600D8D8AE /* CleanNoteCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CleanNoteCore.xcodeproj; path = ../CleanNoteCore/CleanNoteCore.xcodeproj; sourceTree = "<group>"; };
 		C8DF78B61D4905770070D75A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8DF78B71D4905770070D75A /* EditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
-		C8DF78B81D4905770070D75A /* EditorWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditorWireframe.swift; sourceTree = "<group>"; };
 		C8DF78B91D4905770070D75A /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		C8DF78BA1D4905770070D75A /* ListWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListWireframe.swift; sourceTree = "<group>"; };
 		C8DF78BB1D4905770070D75A /* RootWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootWireframe.swift; sourceTree = "<group>"; };
@@ -124,6 +124,7 @@
 		8C9557601DB33DB400E7FBE7 /* Flow */ = {
 			isa = PBXGroup;
 			children = (
+				8C9557651DB346A100E7FBE7 /* NoteIDSource.swift */,
 				8C089EA41D9EC06C00077828 /* StoryboardViewController.swift */,
 				8CC323C41D998CDF00CF1557 /* StoryboardSegueCoordinator.swift */,
 				8C95575E1DB33D1000E7FBE7 /* EditorSegueConfiguration.swift */,
@@ -218,7 +219,6 @@
 			isa = PBXGroup;
 			children = (
 				C8DF78B71D4905770070D75A /* EditorViewController.swift */,
-				C8DF78B81D4905770070D75A /* EditorWireframe.swift */,
 				C8DF78C51D4905810070D75A /* MockEditorWireframe.swift */,
 				C8DF78C31D4905810070D75A /* EditorViewControllerTests.swift */,
 				C8DF78C81D4905810070D75A /* TestableEditorViewController.swift */,
@@ -382,12 +382,12 @@
 				C8DF78BC1D4905770070D75A /* AppDelegate.swift in Sources */,
 				C8DF78C11D4905770070D75A /* RootWireframe.swift in Sources */,
 				8C089EA51D9EC06C00077828 /* StoryboardViewController.swift in Sources */,
+				8C9557661DB346A100E7FBE7 /* NoteIDSource.swift in Sources */,
 				C8DF78BD1D4905770070D75A /* EditorViewController.swift in Sources */,
 				8C95575F1DB33D1000E7FBE7 /* EditorSegueConfiguration.swift in Sources */,
 				C8296D4A1D665FE800E5DA44 /* AlertHelper.swift in Sources */,
 				8CC323C51D998CDF00CF1557 /* StoryboardSegueCoordinator.swift in Sources */,
 				C8DF78BF1D4905770070D75A /* ListViewController.swift in Sources */,
-				C8DF78BE1D4905770070D75A /* EditorWireframe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
