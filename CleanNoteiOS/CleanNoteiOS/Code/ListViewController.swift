@@ -29,7 +29,7 @@ class ListViewController: StoryboardViewController {
     
 }
 
-extension ListViewController: NoteDataSource {
+extension ListViewController: EditorViewControllerSource {
     
     func noteID(for sender:Any?) -> String {
         return noteIDFrom(object: sender) ?? noteIDForSelectedRowIn(tableView: tableView)!

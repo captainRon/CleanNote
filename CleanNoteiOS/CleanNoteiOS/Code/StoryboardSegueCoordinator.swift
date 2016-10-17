@@ -1,10 +1,6 @@
 import UIKit
 
-protocol StoryboardViewControllerVisitor {
-    func process(_ viewController: EditorViewController)
-}
-
-protocol Segueable {
+protocol SegueableViewController {
     func accept(visitor: StoryboardViewControllerVisitor)
 }
 
@@ -14,7 +10,7 @@ struct StoryboardSegueCoordinator: StoryboardViewControllerVisitor {
     let sender: Any?
     
     func prepare() {
-        guard let destination = segue.destination as? Segueable else {return}
+        guard let destination = segue.destination as? SegueableViewController else { return }
         destination.accept(visitor: self)
     }
     
