@@ -2,6 +2,7 @@ import UIKit
 import CleanNoteCore
 
 class EditorViewController: UIViewController {
+    
   var interactor: EditorInteractorInput!
   lazy var alertHelper: AlertHelper = {
     return AlertHelper()
@@ -14,10 +15,10 @@ class EditorViewController: UIViewController {
     textView.becomeFirstResponder()
   }
     
-    override func viewWillAppear(_ animated: Bool) {
-        interactor.fetchText()
-    }
-    
+  override func viewWillAppear(_ animated: Bool) {
+      interactor.fetchText()
+  }
+
 }
 
 extension EditorViewController: EditorInterface {

@@ -1,11 +1,6 @@
 import UIKit
 import CleanNoteCore
 
-extension EditorViewController: SegueableViewController {
-    func accept(visitor: StoryboardViewControllerVisitor){
-        visitor.process(self)
-    }
-}
 
 extension StoryboardSegueCoordinator {
     

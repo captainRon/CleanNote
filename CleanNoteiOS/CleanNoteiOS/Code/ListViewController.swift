@@ -11,7 +11,7 @@ class NoteIDWrapperObject: NSObject {
   }
 }
 
-class ListViewController: StoryboardViewController {
+class ListViewController: StoryboardViewController{
   var interactor: ListInteractorInput!
   var noteGateway: NoteGateway!
   var list: ListViewList?
@@ -26,7 +26,6 @@ class ListViewController: StoryboardViewController {
     interactor.makeNote()
   }
 
-    
 }
 
 extension ListViewController: EditorViewControllerSource {

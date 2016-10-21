@@ -1,12 +1,6 @@
 import UIKit
 import CleanNoteCore
 
-extension ListViewController: SegueableViewController {
-    func accept(visitor: StoryboardViewControllerVisitor){
-        visitor.process(self)
-    }
-}
-
 extension StoryboardSegueCoordinator {
     
     internal func process(_ viewController: ListViewController) {
